@@ -4,13 +4,19 @@
 void outputGrid(int* arr);
 
 int main(int argc, char *argv[]) { 
-    int* array = calloc(16, sizeof(int));
+
+   if(argc != 17) {
+    printf("Not correct number of arguments\n");
+    return 1;
+   }
+   int* array = calloc(16, sizeof(int));
+   for(int i = 0; i < 16; i++) {
+    array[i] = *argv[i+1] - 48;
+   }    
     outputGrid(array);
-    free(array);
     printf("\n");
     return 0;
 }
-
 
 void outputGrid(int *arr) {
     for(int i = 0; i < 16; i+=4) {
@@ -18,3 +24,4 @@ void outputGrid(int *arr) {
     }
     return;
 }
+
