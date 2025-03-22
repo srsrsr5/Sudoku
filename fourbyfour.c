@@ -19,9 +19,9 @@ int main(int argc, char *argv[]) {
 }
 
 void outputGrid(int *arr) {
-    for(int i = 0; i < 16; i+=4) {
-        printf("|%d%d|%d%d|\n", arr[i], arr[i+1], arr[i+2], arr[i+3]);
+    for(int i = 0; i < 12; i+=2){
+        if(i==4) {i+=4;}
+        printf("|%d%d|%d%d|\n", arr[i], arr[i+1], arr[i+4], arr[i+5]);
     }
-    return;
 }
 
