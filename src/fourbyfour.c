@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) {
     array[i] = *argv[i+1] - 48;
    }    
     outputGrid(array);
-    printf("\n");
     return 0;
 }
 
@@ -24,4 +23,6 @@ void outputGrid(int *arr) {
         printf("|%d%d|%d%d|\n", arr[i], arr[i+1], arr[i+4], arr[i+5]);
     }
 }
+
+
 
